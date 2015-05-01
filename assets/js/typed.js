@@ -234,8 +234,13 @@
             var humanize = Math.round(Math.random() * (100 - 30)) + this.backSpeed;
             var self = this;
 
-            self.timeout = setTimeout(function() {
+            self.el.fadeOut(function() {
+                self.el.text("");
+            });
 
+            self.timeout = setTimeout(function() {
+                curStrPos = 0;
+                self.el.fadeIn();
                 // ----- this part is optional ----- //
                 // check string array position
                 // on the first string, only delete one word
@@ -298,7 +303,7 @@
                 }
 
                 // humanized value for typing
-            }, humanize);
+            }, 1000);
 
         }
 
