@@ -17,14 +17,11 @@ jQuery(document).ready(function($) {
     });
 
     // Home page Social on mouse over slide up / down
-    jQuery(function($) {
-        $('.social-icons-jump a,' +
-            '.social-icons-jump-bg a').each(function() {
+        $('.social-icons-jump a,' + '.social-icons-jump-bg a').each(function() {
             var $el = $(this);
             $el.append($el.find('i').clone());
-});
+        });
         $('.social-icons-big a i').wrap('<span></span>');
-    });
     // Home page Social on mouse over END
 
     // Typewriter
@@ -33,7 +30,7 @@ jQuery(document).ready(function($) {
             "A multi-disciplinary <span>Web<span>", 
             "And <span>Software</span> Developer.", 
             "More than <span>10 Year's</span> Experience.",
-            "Mastery of the Web is my <span>Conquest</span>",
+            "Mastery of the Web is my <span>Conquest</span>.",
             "Contact me If you want to <span>Join</span> Me."
         ],
         typeSpeed: 100,
