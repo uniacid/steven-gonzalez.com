@@ -1,0 +1,483 @@
+.cycle-slideshow, .cycle-slideshow * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cycle-slideshow li div {
+    width: 400px;
+    padding: 20px;
+    background: rgba(51, 51, 51, .8);
+    border: 1px solid rgba(255, 255, 255, .2);
+    margin: 300px 0 0 200px;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.bg-pattern {
+    background: url(assets/img/patterns/06.png) repeat fixed 50% 0 transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 7;
+    top: 0;
+}
+.prev:before, .next:before {
+    position: absolute;
+}
+.hprev {
+    opacity: 1;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 0%;
+    top: 45%;
+    margin-top: -25px;
+    z-index: 1002;
+    margin: 0;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+}
+.hnext {
+    opacity: 1;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 0%;
+    top: 45%;
+    margin-top: -25px;
+    z-index: 1002;
+    margin: 0;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+}
+.hprev i, .hnext i {
+    text-align: center;
+    top: 10px;
+    font-size: 60px;
+    display: block;
+}
+.cycle-pager {
+    text-align: center;
+    width: 100%;
+    z-index: 500;
+    position: absolute;
+    bottom: 10px;
+    overflow: hidden;
+    display: none;
+}
+.cycle-pager span {
+    font-family: arial;
+    font-size: 50px;
+    width: 16px !important;
+    height: 16px !important;
+    display: inline-block;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    margin-right: 5px;
+}
+.cycle-pager > * {
+    cursor: pointer;
+}
+.cycle-overlay {
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: transparent;
+    padding: 0;
+    opacity: 1
+}
+.banner-background {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /*-moz-animation: fadeIn 0.8s ease-in .8s backwards;
+		-webkit-animation: fadeIn 0.8s ease-in .8s backwards;
+	animation: fadeIn 0.8s ease-in .8s backwards;*/
+}
+.cycle-slideshow {
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+    position: absolute!important;
+    z-index: 888;
+    background-color: #333333;
+}
+.cycle-slideshow ul, .cycle-slideshow li {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    list-style-type: none;
+}
+.pat {
+    content: '';
+    background: transparent url(assets/img/pattern.png) repeat top left;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.cycle-slideshow img {
+    width: 100%;
+    min-width: 100%;
+}
+.cycle-caption {
+    width: 99%;
+    height: 20%;
+    padding: 20px;
+    position: absolute;
+    top: 43%;
+    left: 0;
+    z-index: 20;
+    opacity: 1;
+}
+.caption1 {
+    color: #FFF;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 45%;
+    right: 5%;
+    z-index: 30;
+    padding: 5px;
+    -moz-animation: fadeInRight 0.8s ease-in 1.3s backwards;
+    -webkit-animation: fadeInRight 0.8s ease-in 1s backwards;
+    animation: fadeInRight 0.8s ease-in 1s backwards;
+    opacity: 1;
+    font-family: 'oswald';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.caption1 span {
+    text-transform: none;
+    text-shadow: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.caption2 {
+    font-weight: lighter;
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 24px;
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    z-index: 40;
+    padding: 5px;
+    -moz-animation: fadeInLeft 0.8s ease-in 1.5s backwards;
+    -webkit-animation: fadeInLeft 0.8s ease-in 1.5s backwards;
+    -o-animation: fadeInLeft 0.8s ease-in 1.5s backwards;
+    animation: fadeInLeft 0.8s ease-in 1.5s backwards;
+    opacity: 1;
+    font-family: 'Carrois Gothic SC', sans-serif;
+    font-weight: 400;
+    /*	margin-right:40px;
+	letter-spacing:2px;*/
+}
+.caption3 {
+    font-weight: bold;
+    background: rgba(243, 42, 42, 0.5);
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 700;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+    left: 5%;
+    margin-bottom: 5px;
+    z-index: 50;
+    padding: 5px 10px;
+    -moz-animation: fadeInRight 0.8s ease-in 1.5s backwards;
+    -webkit-animation: fadeInRight 0.8s ease-in 1.5s backwards;
+    animation: fadeInRight 0.8s ease-in 1.5s backwards;
+    opacity: 1;
+    font-family: 'Carrois Gothic SC', sans-serif;
+    clear: both;
+}
+.caption4 {
+    font-weight: lighter;
+    color: #cacaca;
+    font-size: 16px;
+    line-height: 24px;
+    background: rgba(0, 0, 0, 0.8);
+    font-family: 'Carrois Gothic SC', sans-serif;
+    -moz-animation: fadeInLeft 0.8s ease-in 1.5s backwards;
+    -webkit-animation: fadeInLeft 0.8s ease-in 1.5s backwards;
+    animation: fadeInLeft 0.8s ease-in 1.5s backwards;
+    position: absolute;
+    text-transform: uppercase;
+    top: 75px;
+    left: 5%;
+    padding: 10px;
+    opacity: 1;
+    cursor: pointer;
+    clear: both;
+}
+/* Gallery */
+
+#slides {
+    min-width: 100% !important;
+    min-height: 100% !important;
+    position: relative;
+    top: 0;
+    z-index: 779;
+}
+#slides .cycle-overlay {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 100px;
+    z-index: 998;
+    color: white;
+    padding: 15px;
+    top: auto;
+    left: auto;
+}
+#slides .cycle-slideshow {
+    top: 0;
+}
+#slides .cycle-slideshow img {
+    width: auto;
+    min-width: 100%;
+}
+#button {
+    /*float:right; position:absolute; top:145px;right:3%; width:25%; z-index:999; */
+    
+    position: relative;
+    width: 17%;
+}
+.gal-top .prev {
+    padding: 10px;
+    position: absolute;
+    right: 50px;
+    top: 18%;
+    background: #f32a2a;
+    z-index: 1002;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+.gal-top .next {
+    padding: 10px;
+    position: absolute;
+    right: 0px;
+    top: 18%;
+    background: #f32a2a;
+    z-index: 1002;
+    margin: 0;
+    cursor: pointer;
+    color: #fff;
+}
+.gal-top .next i, .gal-top .prev i {
+    text-align: center;
+    top: 10px;
+    font-size: 25px;
+    padding: 0px 5px;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    text-decoration: none;
+}
+.gal-top .prev:hover, .gal-top .next:hover {
+    color: #ffffff;
+    background-color: rgba(17, 17, 17, .95);
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    text-decoration: none;
+}
+#slides .cycle-caption {
+    height: 30%;
+    bottom: 0;
+    top: auto;
+}
+#slides .cycle-overlay div {
+    font-weight: bold;
+    color: #FFF;
+    font-size: 30px;
+    background: rgba(243, 42, 42, 0.5);
+    font-weight: 700;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+    left: 5%;
+    margin-bottom: 5px;
+    z-index: 50;
+    padding: 5px 10px;
+    opacity: 1;
+    font-family: 'Carrois Gothic SC', sans-serif;
+    clear: both;
+}
+/* Gallery Ends */
+
+@media(max-width: 991px) {
+    #slides .cycle-slideshow img {
+        height: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 980px) {
+    .caption1 {
+        font-size: 44px;
+        left: 10%;
+        /*bottom:40%; margin-bottom:20px;*/
+    }
+    .caption2 {
+        left: 10%;
+        /* bottom:30%;*/
+    }
+    .caption3 {
+        font-size: 32px;
+    }
+    .caption4 {
+        top: 75px;
+    }
+    #slides .cycle-overlay div {
+        font-size: 32px;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .caption1 {
+        font-size: 32px;
+        left: 10%;
+        /* bottom:40%; margin-bottom:20px;*/
+    }
+    .caption2 {
+        left: 10%;
+        /* bottom:30%;*/
+    }
+    .caption3 {
+        font-size: 28px;
+    }
+    .caption4 {
+        top: 70px;
+    }
+    #slides .cycle-overlay div {
+        font-size: 28px;
+    }
+}
+@media (max-width: 600px) {
+    .caption1 {
+        font-size: 32px;
+        display: none;
+    }
+    .caption2 {
+        font-size: 14px;
+        left: 10%;
+        /* bottom:30%;*/
+        
+        display: none;
+    }
+    .caption3 {
+        font-size: 22px;
+        display: none;
+    }
+    #slides .cycle-caption {
+        height: 40%;
+    }
+}
+@media (max-width: 568px) {
+    .caption1 {
+        font-size: 32px;
+        display: none;
+    }
+    .caption2 {
+        font-size: 14px;
+        left: 10%;
+        /* bottom:30%;*/
+        
+        display: none;
+    }
+    .caption3 {
+        font-size: 22px;
+        display: none;
+    }
+    #slides .cycle-caption {
+        height: 40%;
+    }
+}
+@media (max-width: 480px) {
+    .caption1 {
+        font-size: 28px;
+        left: 10%;
+        /*bottom:40%; margin-bottom:20px;*/
+        
+        display: none;
+    }
+    .caption2 {
+        font-size: 14px;
+        left: 10%;
+        /* bottom:30%;*/
+        
+        display: none;
+    }
+    .caption3 {
+        font-size: 22px;
+        display: none;
+    }
+    .caption4 {
+        top: 65px;
+    }
+    #slides .cycle-overlay div {
+        font-size: 22px;
+    }
+}
+@media (max-width: 384px) {
+    .caption1 {
+        font-size: 24px;
+    }
+    .caption2 {
+        font-size: 14px;
+    }
+}
+@media (min-width: 240px) and (max-width: 320px) {
+    .caption1 {
+        font-size: 22px;
+        left: 10%;
+        /* bottom:40%; margin-bottom:20px; */
+    }
+    .caption2 {
+        font-size: 12px;
+        left: 10%;
+        /*bottom:30%;*/
+    }
+    .caption3 {
+        font-size: 16px;
+        margin-right: 30px;
+        top: 0px;
+        margin-bottom: 10px;
+    }
+    .caption4 {
+        font-size: 12px;
+        margin-right: 30px;
+        top: 50px;
+    }
+    #slides .cycle-overlay div {
+        font-size: 16px;
+        margin-right: 30px;
+        margin-bottom: 10px;
+    }
+}
