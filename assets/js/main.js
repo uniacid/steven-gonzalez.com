@@ -103,6 +103,24 @@ jQuery(document).ready(function($) {
         loopCount: false
     });
 
+    // Time of day
+    var today = new Date();
+    var timeNow = today.getHours();
+    var greeting;
+    
+    if (timeNow >= 16 && timeNow <= 23) {
+      greeting = 'Evening';
+    }
+    if (timeNow >= 1 && timeNow <= 11) {
+        greeting = 'Morning';
+    }
+    if (timeNow >= 12 && timeNow <= 15) {
+        greeting = 'Afternoon';
+    }
+
+    if (greeting != 'undefined')
+        $('#home-slider-title .greeting').append(greeting);
+
     // Set hash
     var url = window.location.href;
     var type = url.split('#');
