@@ -3,7 +3,7 @@
         font-size: 22px
     }
     .main-nav ul li li a:hover, .main-nav ul li li a.selected {
-        color: #ffffff;
+        color: #454545;
         border-radius: 0;
     }
 }
@@ -16,7 +16,7 @@
     width: 100%;
     height: 85px;
     top: 0px;
-    background: url(../img/menu-bg.jpg) repeat-x;
+    /*background: url(assets/img/menu-bg.jpg) repeat-x;*/
     border-radius: 0;
     z-index: 999;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
@@ -93,7 +93,7 @@
 }
 .main-nav ul li a .sub-toggle:before {
     font-family: FontAwesome;
-    color: #b9b9b9;
+    color: #454545;
     width: 42px;
     height: 42px;
     line-height: 42px;
@@ -117,14 +117,14 @@
     background-color: rgba(84, 84, 84, 0.98);
 }
 .main-nav ul li a .sub-toggle:hover:before {
-    color: #b9b9b9;
+    color: #454545;
 }
 ul.nav li a:link {
-    color: #b9b9b9;
+    color: #454545;
     text-decoration: none;
 }
 ul.nav li a:visited {
-    color: #b9b9b9;
+    color: #454545;
     text-decoration: none;
 }
 ul.nav li a:hover, ul.nav li a.selected {
@@ -137,21 +137,21 @@ ul.nav li a:hover, ul.nav li a.selected {
     background: rgba(255, 255, 255, 0.95);
 }
 ul.nav li a.selected {
-    color: #ffffff;
+    color: #454545;
     text-decoration: none;
 }
 .main-nav ul li li i {
     display: none;
 }
 .main-nav>ul>li>ul {
-    border-top: 0px solid #ffffff;
+    border-top: 0px solid #454545;
 }
 ul.nav li a.selected {
     color: #333;
     background: rgba(255, 255, 255, 0.95);
 }
 ul.nav ul li a.selected, ul.nav ul li a.focus, ul.nav ul li a.hover {
-    color: #ffffff;
+    color: #454545;
 }
 ul.nav li a {
     font-family: 'Oswald';
@@ -164,11 +164,11 @@ ul.nav li a {
     letter-spacing: -2px;
     display: inline-block;
 }
-#home-header .main-nav ul > li > a:active, #home-header .main-nav ul > li > a:visited, #home-header .main-nav ul > li > a:link, #header .main-nav ul > li > a:active, #header .main-nav ul > li > a:visited, #header .main-nav ul > li > a:link {
+#home-header .main-nav ul > li > a:active, #home-header .main-nav ul > li > a:visited, #home-header .main-nav ul > li > a:link, #header-menu .main-nav ul > li > a:active, #header-menu .main-nav ul > li > a:visited, #header-menu .main-nav ul > li > a:link {
     background: transparent;
 }
 @media (min-width: 992px) {
-    #home-header .main-nav ul > li > a, #header .main-nav ul > li > a {
+    #home-header .main-nav ul > li > a, #header-menu .main-nav ul > li > a {
         font-family: 'Oswald';
         color: #454545;
         text-transform: uppercase;
@@ -176,21 +176,21 @@ ul.nav li a {
         font-weight: 400;
         letter-spacing: 1px;
     }
-    #header .main-nav ul > li > a {
+    #header-menu .main-nav ul > li > a {
         padding: 28px 12px;
     }
-    #home-header .main-nav ul ul li a:hover, #header .main-nav ul ul li a:hover {
+    #home-header .main-nav ul ul li a:hover, #header-menu .main-nav ul ul li a:hover {
         background: rgba(255, 255, 255, 0.2);
-        color: #fff;
+        color: #454545;
         font-weight: normal;
     }
-    #home-header .main-nav ul > li > a.selected, #header .main-nav ul > li > a.selected {
+    #home-header .main-nav ul > li > a.selected, #header-menu .main-nav ul > li > a.selected {
         color: #7e1a14;
     }
-    #home-header .main-nav ul > li > a:hover, #header .main-nav ul > li > a:hover {
+    #home-header .main-nav ul > li > a:hover, #header-menu .main-nav ul > li > a:hover {
         color: #7e1a14;
     }
-    #home-header .main-nav ul li li a, #header .main-nav ul li li a {
+    #home-header .main-nav ul li li a, #header-menu .main-nav ul li li a {
         letter-spacing: 1px;
         font-weight: 400;
         color: #D3CBCB;
@@ -199,7 +199,7 @@ ul.nav li a {
     .main-nav ul>ul>li:hover i {
         color: #333;
     }
-    .menu-inner .header-table {
+    .menu-inner .header-menu-table {
         display: table;
         width: 100%;
         table-layout: auto
@@ -245,10 +245,10 @@ ul.nav li a {
     #home-header .main-nav ul > li > a {
         padding: 40px 12px;
     }
-    #home-header .main-nav ul > li > a, #header .main-nav ul > li > a {
+    #home-header .main-nav ul > li > a, #header-menu .main-nav ul > li > a {
         color: #454545;
     }
-    #home-header .main-nav ul ul li a, #header .main-nav ul li li a {
+    #home-header .main-nav ul ul li a, #header-menu .main-nav ul li li a {
         padding: 12px 15px;
     }
     .main-nav ul ul li i {
@@ -318,27 +318,27 @@ ul.nav li a {
     }
     .main-nav ul li li a:hover, .main-nav ul li li a.selected {
         background-color: #98c521;
-        color: #ffffff;
+        color: #454545;
         border-radius: 0;
     }
     ul.nav li li a:hover:after, ul.nav li li a.selected:after {
         border: none;
     }
     ul.nav li a:link {
-        color: #ffffff;
+        color: #454545;
         text-decoration: none;
     }
     ul.nav li a:visited {
-        color: #ffffff;
+        color: #454545;
         text-decoration: none;
     }
     ul.nav li a:hover {
-        color: #ffffff;
+        color: #454545;
         text-decoration: none;
         background-color: transparent;
     }
     ul.nav li a.selected {
-        color: #ffffff;
+        color: #454545;
         text-decoration: none;
         background-color: transparent;
     }
@@ -358,13 +358,13 @@ ul.nav li a {
 @media (min-width: 1200px) {} #home-header .main-nav ul li li a: hover, #home-header .main-nav ul li li a.selected {
     background:rgba(255, 255, 255, .2);
     font-weight:400;
-    color:#fff;
+    color:#454545;
     border-radius:0;
 }
-#header .main-nav ul li li a:hover, #header .main-nav ul li li a.selected {
+#header-menu .main-nav ul li li a:hover, #header-menu .main-nav ul li li a.selected {
     background: rgba(255, 255, 255, .2);
     font-weight: 400;
-    color: #fff;
+    color: #454545;
     border-radius: 0;
 }
 .main-nav ul li a .sub-toggle {
