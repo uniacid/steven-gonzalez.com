@@ -262,6 +262,17 @@ jQuery(document).ready(function($) {
             }, 1700, "easeOutCirc");
         });
     });
+
+    // Portfolio
+    $('#portfolio-grid').mixitup({
+        effects: ['fade', 'scale'],
+        easing: 'snap'
+    });
+    
+    $('#portfolio-grid-modal').mixitup({
+        effects: ['fade', 'scale'],
+        easing: 'snap'
+    });
 });
 
 // Custom
