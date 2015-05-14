@@ -121,10 +121,10 @@ p a:hover {
     transition: 0.5s;
     -moz-transition: 0.5s;
     /* Firefox 4 */
-    
+
     -webkit-transition: 0.5s;
     /* Safari and Chrome */
-    
+
     -o-transition: 0.5s;
     /* Opera */
 }
@@ -460,7 +460,7 @@ img {
 }
 .circle {
     /*background-color: rgba(188, 223, 228, 0.95);*/
-    
+
     background-color: rgba(255, 255, 255, 0.3);
     width: 70px;
     height: 70px;
@@ -866,7 +866,7 @@ li a:hover::after, li a:focus::after {
     bottom: 0px;
     top: 0px;
     /*width: 100%;*/
-    
+
     margin: auto;
     height: 25%;
     position: absolute;
@@ -1107,7 +1107,7 @@ li a:hover::after, li a:focus::after {
     padding: 7px;
     /*background: rgba(246, 180, 0, 1);*/
     /*background: rgba(66, 174, 215, 1);*/
-    
+
     background: #3EE4EF;
     color: #fff;
     font-size: 13px;
@@ -1172,7 +1172,7 @@ blockquote p {
     background: rgba(255, 255, 255, 0.93);
     position: absolute;
     /*opacity:0.9;*/
-    
+
     z-index: 0;
 }
 .content-overlay-fullwidth {
@@ -1293,50 +1293,50 @@ blockquote p {
 #home-header .main-nav ul li ul, #header-menu .main-nav ul li ul, .btn-3:hover, .slicknav_nav, .slicknav_nav li ul li a:hover {
     background: #3EE4EF;
     /* Old browsers */
-    
+
     background: -moz-linear-gradient(top, #3EE4EF 0%, #0DADE8 100%);
     /* FF3.6+ */
-    
+
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3EE4EF), color-stop(100%, #0DADE8));
     /* Chrome,Safari4+ */
-    
+
     background: -webkit-linear-gradient(top, #3EE4EF 0%, #0DADE8 100%);
     /* Chrome10+,Safari5.1+ */
-    
+
     background: -o-linear-gradient(top, #3EE4EF 0%, #0DADE8 100%);
     /* Opera 11.10+ */
-    
+
     background: -ms-linear-gradient(top, #3EE4EF 0%, #0DADE8 100%);
     /* IE10+ */
-    
+
     background: linear-gradient(to bottom, #3EE4EF 0%, #0DADE8 100%);
     /* W3C */
-    
+
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3EE4EF', endColorstr='#0DADE8', GradientType=0);
     /* IE6-9 */
 }
 .btn-3, .filters li:hover, .filters li.active, .navigation_button a, .navigation_button1 a:hover {
     background: #3EE4EF;
     /* Old browsers */
-    
+
     background: -moz-linear-gradient(top, #3EE4EF 0%, #0DADE8 100%);
     /* FF3.6+ */
-    
+
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3EE4EF), color-stop(100%, #0DADE8));
     /* Chrome,Safari4+ */
-    
+
     background: -webkit-linear-gradient(top, #3EE4EF 0%, #0DADE8 100%);
     /* Chrome10+,Safari5.1+ */
-    
+
     background: -o-linear-gradient(top, #3EE4EF 0%, #0DADE8 100%);
     /* Opera 11.10+ */
-    
+
     background: -ms-linear-gradient(top, #3EE4EF 0%, #0DADE8 100%);
     /* IE10+ */
-    
+
     background: linear-gradient(to bottom, #3EE4EF 0%, #0DADE8 100%);
     /* W3C */
-    
+
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3EE4EF', endColorstr='#0DADE8', GradientType=0);
     /* IE6-9 */
 }
@@ -2063,7 +2063,7 @@ a.mail-text:hover {
     border: 0;
     outline: 0;
     /* IE6-9 */
-    
+
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 42, 42, 0.8);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 42, 42, 0.8);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 42, 42, 0.8);
@@ -2231,7 +2231,7 @@ a.mail-text:hover {
         font-size: 13px;
         line-height: 30px;
     }*/
-    
+
     .contact > a {
         color: #fff;
     }
@@ -2244,7 +2244,7 @@ a.mail-text:hover {
 @media (max-width: 990px) {
     .header-contact {
         /*z-index: 0;*/
-        
+
         width: 100%;
         margin-top: 60px!important;
     }
@@ -2452,7 +2452,7 @@ a.mail-text:hover {
 }
 .cbp_tmtimeline > li .cbp_tmtime span:first-child {
     /*font-size:2em;*/
-    
+
     font-size: 20px;
     font-weight: 700;
     line-height: 1.4;
