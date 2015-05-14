@@ -472,6 +472,9 @@ img {
     padding-top: 25px;
     display: inline-block;
 }
+.circle.contact {
+    background-color: rgb(62, 228, 239);
+}
 .header-social-icons ul {
     list-style: none;
     padding: 0;
@@ -1948,7 +1951,7 @@ hr {
     font-size: 26px;
     color: #3EE4EF;
 }
-.phone {
+.phone.contact-me, .phone.contact-me a {
     font-size: 15px;
     color: #545454;
     text-transform: uppercase;
@@ -1958,7 +1961,13 @@ hr {
     margin: 10px 15px 10px 0px;
     font-family: 'Oswald';
 }
-.phone i {
+.phone.contact-me a:hover {
+    color: #3EE4EF;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.phone.contact-me i {
     color: #3EE4EF;
     font-size: 24px;
     text-transform: uppercase;
@@ -1977,6 +1986,11 @@ a.mail-text:hover {
     text-decoration: none;
     color: #3EE4EF;
 }
+.mail-text a:hover {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
 .mail-text i {
     margin-right: 10px;
     font-size: 20px;
@@ -1987,9 +2001,6 @@ a.mail-text:hover {
 }
 #map_canvas {
     z-index: 0;
-}
-.content_text {
-    z-index: 3;
 }
 .cont_form input[type="text"] {
     width: 100%;
