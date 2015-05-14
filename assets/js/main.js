@@ -1,25 +1,25 @@
-//Scroll speed and page animation Scrollto.js parameter        
-var horizontal_scroll_speed = 1500 // speed Horizontal Scrollto parameter default #1200.
+//Scroll speed and page animation Scrollto.js parameter
+var horizontal_scroll_speed = 1500; // speed Horizontal Scrollto parameter default #1200.
 
-//animation sliding speed configure 
-var menu_header_speed = 300 // on sub page topbar sliding down animation default #350
-var menu_main_header_speed = 600 // home page middle bar sliding down animation default #800
+//animation sliding speed configure
+var menu_header_speed = 300; // on sub page topbar sliding down animation default #350
+var menu_main_header_speed = 600; // home page middle bar sliding down animation default #800
 
 //Scroll speed and page animation end
 
-//content scrollbar (niceScroll) colour 
-var niceScrollcursorcolor = "#ef9a00" // Set your content niceScroll color here!
-var niceScrollscrollspeed = 100 // Set niceScroll speed, default value is 60
-var niceScrollmousescrollstep = 80 // Set niceScroll speed with mouse wheel, default value is 40
-var niceScrollsmoothscroll = true // Set true/ false  default true
-var niceScrollcursorwidth = "12px" // Set cursor width in pixel, default is 5
-var niceScrollcursorborder = 0 // Set niceScroll border color here! for example 2px solid #000000
-var niceScrollcursordragontouch = true // Enable cursor drag scrolling
-var niceScrollcursorborderradius = "20px" // Set niceScroll border radius for cursor, default is "4px"
-var niceScrollautohidemode = true // Set the niceScroll visible or hidden
-var niceScrollbackground = "#e9e9e9" // Set your niceScroll rails background color
-var niceScrollhidecursordelay = 2500 // Set your niceScroll rails background color
-var niceScrollhorizrailenabled = false // Set nicescroll horizontal scroll
+//content scrollbar (niceScroll) colour
+var niceScrollcursorcolor = "#ef9a00"; // Set your content niceScroll color here!
+var niceScrollscrollspeed = 100; // Set niceScroll speed, default value is 60
+var niceScrollmousescrollstep = 80; // Set niceScroll speed with mouse wheel, default value is 40
+var niceScrollsmoothscroll = true; // Set true/ false  default true
+var niceScrollcursorwidth = "12px"; // Set cursor width in pixel, default is 5
+var niceScrollcursorborder = 0; // Set niceScroll border color here! for example 2px solid #000000
+var niceScrollcursordragontouch = true; // Enable cursor drag scrolling
+var niceScrollcursorborderradius = "20px"; // Set niceScroll border radius for cursor, default is "4px"
+var niceScrollautohidemode = true; // Set the niceScroll visible or hidden
+var niceScrollbackground = "#e9e9e9"; // Set your niceScroll rails background color
+var niceScrollhidecursordelay = 2500; // Set your niceScroll rails background color
+var niceScrollhorizrailenabled = false; // Set nicescroll horizontal scroll
 var typedWords = $("#typed-words");
 
 jQuery(document).ready(function($) {
@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
     // Project Modal Carousel
     $('.carousel').carousel({
         interval: 3000
-    })
+    });
 
     // IE9
     $('input[type=text], textarea').placeholder();
@@ -107,7 +107,7 @@ jQuery(document).ready(function($) {
     var today = new Date();
     var timeNow = today.getHours();
     var greeting;
-    
+
     if (timeNow >= 16 && timeNow <= 23) {
       greeting = 'Evening';
     }
@@ -130,41 +130,41 @@ jQuery(document).ready(function($) {
         hash = type[1];
     }
 
-    if (hash != "") {
+    if (hash !== "") {
         var hash_fullname = "#" + hash;
         $("a[href='" + hash_fullname + "']").addClass('selected');
         if (hash_fullname == "#home") {
-            // hiding subpage header 
+            // hiding subpage header
             $('#header-menu').hide('fade', {
                 direction: 'left',
                 easing: 'easeInQuad'
             }, 1000);
-            Animation("#header-menu", "fadeOutUp", "200");
+            new Animation("#header-menu", "fadeOutUp", "200");
         } else {
-            // hiding Home page header 
+            // hiding Home page header
             $('#home-header').hide('fade', {
                 direction: 'left',
                 easing: 'easeInQuad'
             }, 600);
-            Animation("#home-header", "fadeOutDown", "200");
+            new Animation("#home-header", "fadeOutDown", "200");
         }
 
         $('#wrapper').scrollTo(hash_fullname, 2000, {
             easing: 'easeInOutExpo',
             axis: 'x',
-            onAfter: function() { // scrollto callback  function 
+            onAfter: function() { // scrollto callback  function
                     if (hash_fullname == "#home") { // for home page animation
                         //  Homepage_Animation();
                     } else { // sub page animation
                         if ($('#header-menu').is(':hidden')) { // if header is hidden then do animation
-                            Subpage_animation();
+                            new Subpage_animation();
                         }
                     }
                 } // scrollto callback function close
 
         }); //   scrollto close
         window.location.hash = ''; // for older browsers, leaves a # behind
-        history.pushState('', document.title, window.location.pathname); // nice and clean  
+        history.pushState('', document.title, window.location.pathname); // nice and clean
     }
 
     // nav
@@ -183,16 +183,16 @@ jQuery(document).ready(function($) {
                     direction: 'left',
                     easing: 'easeInQuad'
                 }, 1000);
-                Animation('#header-menu', 'fadeOutUp', '200');
+                new Animation('#header-menu', 'fadeOutUp', '200');
             } else {
-                if (name != '') {
+                if (name !== '') {
                     $('.selected').removeClass('selected');
                     $("a[href='" + name + "']").addClass('selected');
                     $('#home-header').hide('fade', {
                         direction: 'left',
                         easing: 'easeInQuad'
                     }, 600);
-                    Animation('#home-header', 'fadeOutDown', '200');
+                    new Animation('#home-header', 'fadeOutDown', '200');
                 }
             }
 
@@ -202,11 +202,11 @@ jQuery(document).ready(function($) {
                 axis: 'x',
                 onAfter: function() {
                     if (name == '#home') {
-                        Homepage_Animation();
+                        new Homepage_Animation();
                         $("a[href='#home']").addClass('selected');
                     } else {
                         if ($('#header-menu').is(':hidden')) {
-                            Subpage_animation();
+                            new Subpage_animation();
                         }
                     }
                 }
@@ -226,14 +226,14 @@ jQuery(document).ready(function($) {
         closeOnClick: true
     });
 
-    // on hash change 
+    // on hash change
     window.onhashchange = function() {
         $('.selected').removeClass('selected');
         var hash = window.location.hash;
-        if (hash != "") {
+        if (hash !== "") {
             $("a[href='" + hash + "']").addClass('selected');
         }
-    }
+    };
 
     // on click navigation add class selected
     $("#header-menu ul.nav li a").click(function() {
@@ -241,7 +241,7 @@ jQuery(document).ready(function($) {
         $(this).attr('class', 'nav-link selected');
     });
 
-    // on external and internal page link 
+    // on external and internal page link
     $('.link').click(function() {
         var name = $(this).attr('href');
         window.location.href = name;
@@ -268,7 +268,7 @@ jQuery(document).ready(function($) {
         effects: ['fade', 'scale'],
         easing: 'snap'
     });
-    
+
     $('#portfolio-grid-modal').mixitup({
         effects: ['fade', 'scale'],
         easing: 'snap'
@@ -284,12 +284,12 @@ function Animation(element, effect, timedelay) {
     $(element).delay(timedelay).removeClass().addClass(effect + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
         $(this).removeClass();
     });
-};
+}
 
 function Homepage_Animation() {
     $('#home-header').show('fade', {
         easing: 'easeInQuad'
-    }, menu_main_header_speed); //on homepage topbar sliding up animation 
+    }, menu_main_header_speed); //on homepage topbar sliding up animation
     Animation("#home-header", "fadeInUp", "200");
     Animation("#spmenu1", "fadeInRight", "300");
     Animation("#spmenu2", "fadeInRight", "800");
@@ -307,12 +307,12 @@ function Subpage_animation() {
     $('#header-menu').show('fade', {
         direction: 'top',
         easing: 'easeInQuad'
-    }, menu_header_speed); //on sub page topbar sliding down animation 
+    }, menu_header_speed); //on sub page topbar sliding down animation
 }
 
 
 /* // Progress bar animation start  */
-// scroll to view element and used for bar and skills 
+// scroll to view element and used for bar and skills
 function isScrolledIntoView(elem) {
     var docViewTop = jQuery(window).scrollTop();
     var docViewBottom = docViewTop + jQuery(window).height();
