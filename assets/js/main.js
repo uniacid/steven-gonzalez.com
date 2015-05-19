@@ -275,11 +275,26 @@ jQuery(document).ready(function($) {
     });
 
     // Image play button
-    var portfolioImage1 = new Image();
+    var portfolioImage1 = new Image(),
+        portfolioImage2 = new Image(),
+        portfolioImageRevo = new Image();
     
-    portfolioImage1.src ='http://rack.3.mshcdn.com/media/ZgkyMDEyLzEwLzE5LzExXzMzXzMzXzE3Nl9maWxlCnAJdGh1bWIJMTIwMHg5NjAwPg/462b8072';
+    portfolioImage1.src ='assets/img/projects/syg_goldtrack.gif';
     $('#portfolioImage1').click(function() {
-       $('#portfolioImage1 > img').attr('src',portfolioImage1.src);
+        $('#portfolioImage1 > span').css('display', 'none');
+        $('#portfolioImage1 > img').attr('src',portfolioImage1.src);
+    });
+
+    portfolioImage2.src ='assets/img/projects/ge_referral.gif';
+    $('#portfolioImage2').click(function() {
+        $('#portfolioImage2 > span').css('display', 'none');
+        $('#portfolioImage2 > img').attr('src',portfolioImage2.src);
+    });
+
+    portfolioImageRevo.src ='assets/img/projects/revo3.png';
+    $('#portfolioImageRevo').click(function() {
+        $('#portfolioImageRevo > span').css('display', 'none');
+        $('#portfolioImageRevo > img').attr('src',portfolioImageRevo.src);
     });
 });
 
