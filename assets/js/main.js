@@ -273,6 +273,14 @@ jQuery(document).ready(function($) {
         effects: ['fade', 'scale'],
         easing: 'snap'
     });
+
+    // Image play button
+    var portfolioImage1 = new Image();
+    
+    portfolioImage1.src ='http://rack.3.mshcdn.com/media/ZgkyMDEyLzEwLzE5LzExXzMzXzMzXzE3Nl9maWxlCnAJdGh1bWIJMTIwMHg5NjAwPg/462b8072';
+    $('#portfolioImage1').click(function() {
+       $('#portfolioImage1 > img').attr('src',portfolioImage1.src);
+    });
 });
 
 // Custom
